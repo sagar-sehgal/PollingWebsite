@@ -1,0 +1,11 @@
+<h2>{{q.quest}}</h2>
+<b>Date Asked </b>{{q.date}} <br/><br/><br/><br/>
+<ul>
+	{% for i in q.choice_set.all %}
+		<li>
+			{{i.ans}}<br/>
+			<b>upvotes=</b>{{i.upvotes}}
+			<br/><br/>
+		</li>
+	{%endfor%}
+</ul>

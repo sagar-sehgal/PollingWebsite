@@ -1,0 +1,10 @@
+{%if questions%}
+<ul>
+	{% for i in questions%}
+		<li><a href="{% url 'polls:detail' i.id %}">{{i.quest}}</a></li>
+	{%endfor%}
+</ul>
+{%else%}
+	<h3>No questions</h3>
+{%endif%}
+
